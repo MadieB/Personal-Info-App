@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                background-color:black;
+                color:black;
+                text-align: center;
+            }
+            div{
+                width: 50%;
+                margin: 20 auto;
+                padding: 10px;
+            }
+            div.shortText{
+                background-color:blue;
+                border: 5px solid darkblue;
+            }
+            
+            div.longText{
+                background-color:cyan;
+                border: 5px solid darkcyan;
+            }
+            div.clicked{
+                background-color: cyan !important;
+            }
+
+        </style>
+       
+    </head>
+    <body>
+        <span style = "color:blue"> <h1>Personal Info App</h1></span>
+        <img src = "Umbreon%20(2).gif" id= "img1"> <img src = "Espeon%20(3).gif">
+        <script>
+            //object
+            let person = {
+                //key : value
+                "firstName" : "Madison",
+                "lastName" : "Barnes",
+                "age" : 18,
+                "favAnimal" : "Wolf",
+                "highSchool" : "Northview",
+                "siblings" : ["Megan Bethel",],
+                "favArtists" : ["Pentatnix", " Lindsey Stirling", " Nerd Out"],
+                "favVideoGames" : ["Mass Effect"," Warframe", " Overwatch", " Assassin's Creed"],
+                "favBooks" : ["Warrior Cats", " Spirit Animals", " Black Beauty", " White Fang", " Wings of Fire"],
+                "favShows" : ["Live PD", " Pitbulls & Parolees", " Animal Cops", " Too Cute", " Avatar"],
+                "favAnime" : ["Attack on Titan", " Naruto", " My Hero Academia", " Soul Eater", " D Gray man"],
+                "favMovies" : ["The Lion King", " Transformers", " Jurassic World", " Avengers"],
+                
+            }
+            console.log(person)
+            
+            /*let elem = document.createElement('h3')
+            elem.innerHTML = person.firstName
+            document.body.appendChild(elem)*/
+             
+             let elem = document.createElement('div')
+             elem.classList.add('shortText')
+             elem.innerHTML = `<h3>Name</h3>
+            ${person.firstName} ${person.lastName}`
+             document.body.appendChild(elem)
+             
+             elem = document.createElement('div')
+            elem.classList.add('shortText')
+             elem.innerHTML = `<h3>Age</h3>
+            ${person.age}`
+             document.body.appendChild(elem)
+             
+            elem = document.createElement('div')
+            elem.classList.add('shortText')
+             elem.innerHTML = `<h3>Siblings</h3>
+            ${person.siblings}`
+             document.body.appendChild(elem)
+            
+             elem = document.createElement('div')
+            elem.classList.add('shortText')
+             elem.innerHTML = `<h3>Favorite Animal</h3>
+            ${person.favAnimal}`
+             document.body.appendChild(elem)
+             
+            elem = document.createElement('div')
+            elem.classList.add('shortText')
+             elem.innerHTML = `<h3>Favorite Artists</h3>
+            ${person.favArtists}`
+             document.body.appendChild(elem)
+            
+            elem = document.createElement('div')
+            elem.classList.add('shortText')
+             elem.innerHTML = `<h3>Favorite Books</h3>
+            ${person.favBooks}`
+             document.body.appendChild(elem)
+            
+             elem = document.createElement('div')
+            elem.classList.add('shortText')
+             elem.innerHTML = `<h3>Favorite Shows</h3>
+            ${person.favShows}`
+             document.body.appendChild(elem)
+             
+             let divs = document.querySelectorAll('div');
+        for (let i = 0; i < divs.length; i++) {
+            let div = divs[i];
+            div.addEventListener('click',handleClick);
+        }
+        
+        function handleClick(event) {
+            //event.target.style.backgroundColor = "white";
+            event.target.classList.toggle('clicked');
+        }
+        
+        document.querySelector('#img1').addEventListener('click',handleImgClick)
+        
+        function handleImgClick(event) {
+            if (event.target.width == 300)
+                event.target.width = 100
+            else
+                event.target.width = 300
+        }
+        </script>
+        <div class="longText">
+        <span style = "color:darkblue"> <h3>Hobbies</h3></span>
+        <p>I have a ton of Hobbies. Many might consider me boring because of what I love to do, but I don't care. I enjoy doing them and I will continue to do them wether people liike it or not. My hobbies include reading, drawing, gaming, and writing. I love to write stories and design characters. Many of the stories I write are known as fanfiction, because they are based on or are an addition to an actual book or show. Most of my stories are from anime. Besides writing I'm also a big fan of Dungeons and Dragons. It is a table top game where you play as a fantasy style character. My favorite class to play with that is Monk, a close combat fighter with special spiritual abilities.</p>
+        <img src = "image-of-opened-magic-book-with-magic-lights_u-l-q103iy20.jpg" height=300>
+        </div>
+        
+        <div class="longText">
+        <span style = "color:darkblue"> <h3>My Summer</h3> </span>
+        <p>Over the summer I went to Cedar Point after many years. I rode the Gatekeeper and the Millenium Force for the first time. That was fun and exciting. I also went camping over the summer. During my week long camping trip, two campers managed to flip a canoe while arguing with on another, and we had a small Raccoon problem. One camper got chased by a racoon. I wish I had gotten to see that. Other than that my summer was mostly sleping in till noon and playing video games for hours. Oh and I went to see the new Lion King with my father. I was impressed but at the same time I was disappointed as well.</p>
+        <img src = "lionking.jpg">
+        </div>
+        
+        <div class="longText">
+        <span style = "color:darkblue"> <h3>Plans After High School</h3></span>
+        <p>Upon graduating from High School, I plan on going to college. Where I plan on going is unknown at this time. So far there are two school I'm currently looking into for college. Those two schools are Lourdes University and Xavier University. The biggest part of my decision is going to be how close I want to be to home and how their Criminal Justice program is like. Xavier has a better program while Lourdes is closer to home. In the end I want to major in Criminal Justice because I want to become a police officer that works alongside a K9 partner, also known as a K9 officer.</p>
+        <img src = "K9.jpg" width = 600>
+        </div>
+        
+        <div class="longText">
+        <span style = "color:darkblue"> <h3>Video Games</h3></span>
+        <p>So I love to play video games. I am a huge fan of video games and often find myself playing something in my free time. Recently I have been obsessed with the game Warframe. It is a free to play game where online players get to play together in a free roam shooter. It's kind of like Skyrim, but it's more futuristic. Other games I play include Overwatch, though that has gotten a little annoying; Kingdom hearts, Assassin's Creed, Monster Hunter World, Attack on Titan 2, Pokemon, and a lot of others.</p>
+        <img src = "warframe.jpg" width= 600>
+        </div>
+        
+        <img src = "Umbreon%20(2).gif"> <img src = "Espeon%20(3).gif">
+        
+    </body>
+</html>
